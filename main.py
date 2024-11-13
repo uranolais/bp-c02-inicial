@@ -12,5 +12,9 @@ itens = [Item("Pizza", 30), Item("Refrigerante", 10)]
 pedido1 = PedidoDelivery(cliente, itens, taxa_entrega=5)
 pedido2 = PedidoRetirada(cliente, itens)
 
-print("Total Pedido Delivery:", pedido1.calcular_total())
-print("Total Pedido Retirada:", pedido2.calcular_total())
+# print("Total Pedido Delivery:", pedido1.calcular_total())
+# print("Total Pedido Retirada:", pedido2.calcular_total())
+
+# Injeção de uma implementação de notificação
+notificacao = NotificacaoEmail()
+pedido1.enviar_notificacao(notificacao, "Seu pedido foi criado com sucesso.")
