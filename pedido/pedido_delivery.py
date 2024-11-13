@@ -1,4 +1,4 @@
-from pedido import Pedido
+from .pedido import Pedido
 
 class PedidoDelivery(Pedido):
     def __init__(self, cliente, itens, taxa_entrega):

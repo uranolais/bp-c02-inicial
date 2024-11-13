@@ -1,4 +1,4 @@
-from notificacao import Notificacao
+from .notificacao import Notificacao
 
 class NotificacaoEmail(Notificacao):
     def enviar(self, cliente, mensagem):

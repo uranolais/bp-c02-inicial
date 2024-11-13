@@ -1,4 +1,4 @@
-from pedido import Pedido
+from .pedido import Pedido
 
 class PedidoRetirada(Pedido):
     def calcular_total(self):
