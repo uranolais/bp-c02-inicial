@@ -11,3 +11,6 @@ class Pedido(ABC):
     @abstractmethod
     def calcular_total(self):
         pass
+
+    def enviar_notificacao(self, notificacao, mensagem):
+        notificacao.enviar(self.cliente, mensagem)
