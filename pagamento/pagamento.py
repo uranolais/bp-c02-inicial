@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class Notificacao(ABC):
+class Pagamento(ABC):
     @abstractmethod
-    def enviar(self, cliente, mensagem):
+    def processar(self, valor):
         pass
