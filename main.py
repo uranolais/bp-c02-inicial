@@ -1,16 +1,12 @@
 from cliente import Cliente
 from item import Item
-from pedido.pedido_delivery import PedidoDelivery
-from pedido.pedido_retirada import PedidoRetirada
 
-# Cliente e itens
+# Criando cliente
 cliente = Cliente("João", "Rua Exemplo, 123")
-itens = [Item("Pizza", 30.0), Item("Refrigerante", 5.0)]
+print(f"Cliente: {cliente.nome}, Endereço: {cliente.endereco}")
 
-# Pedido Delivery
-pedido_delivery = PedidoDelivery(cliente, itens, taxa_entrega=10.0)
-print(f"Total do Pedido Delivery: R${pedido_delivery.calcular_total():.2f}")
-
-# Pedido Retirada
-pedido_retirada = PedidoRetirada(cliente, itens)
-print(f"Total do Pedido Retirada: R${pedido_retirada.calcular_total():.2f}")
+# Criando itens
+item1 = Item("Pizza", 30.0)
+item2 = Item("Refrigerante", 5.0)
+print(f"Item: {item1.nome}, Preço: R${item1.preco:.2f}")
+print(f"Item: {item2.nome}, Preço: R${item2.preco:.2f}")
